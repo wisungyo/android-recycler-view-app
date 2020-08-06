@@ -42,9 +42,11 @@ class MainActivity : AppCompatActivity() {
         val adapter = PlayerAdapter(listOfPlayer)
 
         val linearLayout = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        val gridLayout = GridLayoutManager(this, 3, LinearLayoutManager.VERTICAL, false)
+        val gridLayout = GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL, false)
 
         sv_recyclerview.layoutManager = linearLayout
+
+        list_radio.check(radio_linear.id)
 
         list_radio.setOnCheckedChangeListener { group, i ->
             val radio: RadioButton = findViewById(i)
